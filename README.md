@@ -9,7 +9,7 @@ Ex: http://127.0.0.1:8000/docs
 
 A base de dados disponibilizada neste repositório foi atualizada pela última vez no dia 06/01/2026, mas você pode atualizá-la por meio das funções disponibilizadas na aplicação.
 
-Funções GET:
+Utilize as funções do tipo GET para fazer pesquisas na base de dados:
 - Para usar a função "Pesquisar Por Nome", clique em "Try it out" e digite uma palavra ou sequencia de caracteres presentes no nome do fermento procurado. Ex: se quisessemos pesquisar pelo fermento Mangrove Jacks, poderíamos escrever "Mangrove", "Jacks", "Mangrove Jacks", "Mangr", "ove Jacks", etc;
 
 - Para usar a função "Pesquisar Por Preço", digite um valor máximo a partir do qual não serão mostrados mais resultados;
@@ -26,6 +26,7 @@ Você também pode modificar a base de dados por meio das outras funções.
 - A função do tipo PUT sobrescreve a tabela, substituindo-a por uma tabela vazia.
 
 - As funções do tipo DELETE apagam os dados provenientes de algum dos websites nelas referenciados.
+
 
 
 
