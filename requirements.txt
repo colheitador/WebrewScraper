@@ -3,7 +3,8 @@ uvicorn
 requests
 beautifulsoup4
 lxml
-pandas==1.5.3
+pandas
 setuptools
 wheel
+
 
