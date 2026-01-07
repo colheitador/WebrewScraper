@@ -24,6 +24,15 @@ app = FastAPI()
 con1 = sqlite3.connect("fermentos.db", check_same_thread=False)
 cursor1 = con1.cursor()
 
+#------
+# Redirecionar raiz "/" para "/docs"
+from fastapi.responses import RedirectResponse
+
+@app.get("/")
+def root():
+    return RedirectResponse(url="/docs")
+#-----
+
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------#
 '''                                            FUNÇÕES PARA PESQUISAR NA BASE DE DADOS                                                                 '''              
@@ -120,3 +129,4 @@ def deletar_piquiribrewshop():
     return func_deletar_piquiribrewshop()
 #-----------------------------------------------------------------------------------------------------------------------------------------------------#
 #-----------------------------------------------------------------------------------------------------------------------------------------------------#
+
