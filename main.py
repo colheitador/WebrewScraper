@@ -28,7 +28,7 @@ cursor1 = con1.cursor()
 # Redirecionar raiz "/" para "/docs"
 from fastapi.responses import RedirectResponse
 
-@app.get("/")
+@app.get("/", include_in_schema=False)
 def root():
     return RedirectResponse(url="/docs")
 #-----
@@ -129,4 +129,5 @@ def deletar_piquiribrewshop():
     return func_deletar_piquiribrewshop()
 #-----------------------------------------------------------------------------------------------------------------------------------------------------#
 #-----------------------------------------------------------------------------------------------------------------------------------------------------#
+
 
