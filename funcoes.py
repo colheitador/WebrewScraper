@@ -58,8 +58,7 @@ def func_gerar_csv(filtro:str): ## o parâmetro filtro deverá ser uma f string 
                 "Link": cada_linha_tabela_de_fermentos[4],
                 }
 
-            #tabela_detalhes = tabela_detalhes.append(cada_dicionario_de_fermentos, ignore_index=True) # para adicionar uma nova linha de restaurante à tabela
-			tabela_detalhes = pd.concat([tabela_detalhes, pd.DataFrame([cada_dicionario_de_fermentos])],ignore_index=True)
+            tabela_detalhes = pd.concat([tabela_detalhes, pd.DataFrame([cada_dicionario_de_fermentos])],ignore_index=True)
 
         tabela_em_csv = tabela_detalhes.to_csv("ultima_busca.csv", sep = ',',index=False) ## para gerar um .csv a partir dessa tabela
 
@@ -717,5 +716,6 @@ def func_deletar_piquiribrewshop():
 #-----------------------------------------------------------------------------------------------------------------------------------------------------#
 #-----------------------------------------------------------------------------------------------------------------------------------------------------#
 #-----------------------------------------------------------------------------------------------------------------------------------------------------#
+
 
 
