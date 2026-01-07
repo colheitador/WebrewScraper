@@ -11,9 +11,9 @@ warnings.simplefilter(action='ignore', category=FutureWarning) # para ignorar os
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------#
 # vamos usar o sqlite3 pra criar uma base de dados de fermentos
-con1 = sqlite3.connect("./fermentos.db", check_same_thread=False) ## conecta à base de dados 'fermentos' (cria essa base se já não existir)
-cursor1 = con1.cursor() ## cria um cursor para fazer operações nessa base
-
+#con1 = sqlite3.connect("./fermentos.db", check_same_thread=False) ## conecta à base de dados 'fermentos' (cria essa base se já não existir)
+#cursor1 = con1.cursor() ## cria um cursor para fazer operações nessa base
+#comentado porque foi necessário remover a conexão global pra que um usuário nao interfira nas pesquisas do outro
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------#
 # Função para gerar uma tabela do tipo .csv
@@ -716,6 +716,7 @@ def func_deletar_piquiribrewshop():
 #-----------------------------------------------------------------------------------------------------------------------------------------------------#
 #-----------------------------------------------------------------------------------------------------------------------------------------------------#
 #-----------------------------------------------------------------------------------------------------------------------------------------------------#
+
 
 
 
