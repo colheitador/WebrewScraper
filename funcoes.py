@@ -83,7 +83,7 @@ def func_gerar_csv(filtro:str, cursor1):  ## o parâmetro filtro deverá ser uma
                 "Data do Scraping (YYYY-MM-DD)": cada_linha_tabela_de_fermentos[3],
                 "Link": cada_linha_tabela_de_fermentos[4],
             }
-            tabela_detalhes = tabela_detalhes.append(cada_dicionario_de_fermentos, ignore_index=True)
+            tabela_detalhes = pd.concat([tabela_detalhes, pd.DataFrame([cada_dicionario_de_fermentos])], ignore_index=True)
 
         tabela_em_csv = tabela_detalhes.to_csv("ultima_busca.csv", sep=',', index=False)
 
@@ -710,3 +710,4 @@ def func_deletar_piquiribrewshop(con1, cursor1):
 #-----------------------------------------------------------------------------------------------------------------------------------------------------#
 #-----------------------------------------------------------------------------------------------------------------------------------------------------#
 #-----------------------------------------------------------------------------------------------------------------------------------------------------#
+
